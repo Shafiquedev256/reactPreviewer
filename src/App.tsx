@@ -40,7 +40,7 @@ const App: React.FC = () => {
   const components: Record<string, React.ElementType> = { code: Code };
 
   return (
-    <div className='h-screen bg-gray-100 flex flex-col justify-center items-center w-screen'>
+    <div className='h-screen bg-gray-100 flex flex-col justify-center items-center w-screen space-y-4'>
       <div className='bg-white rounded-lg shadow-lg p-6 w-[80%] h-[95%] flex flex-col justify-center items-center'>
         <div className='bg-red font-bold text-2xl w-[70%]'>Editor</div>
         <textarea
@@ -56,7 +56,15 @@ const App: React.FC = () => {
           >{`\n\`\`\`${markdownText}\`\`\`\n`}</Markdown>
         </div>
       </div>
-      <footer>Designed and Created by Musinguzi Shafiq @2024</footer>
+      <footer className='font-medium flex flex-row space-x-4 p-4'>
+        <a
+          href='https://github.com/Shafiquedev256/reactPreviewer'
+          className='underline'
+        >
+          View code
+        </a>
+        <span>Designed and Created by Musinguzi Shafiq @2024</span>
+      </footer>
     </div>
   );
 };
